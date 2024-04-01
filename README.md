@@ -5,6 +5,12 @@ Work in progress frontend for browser strategy game.
 Implemented:
 Loading config data from JSON file, basic action system for gameplay, and character creator mockup
 
+IN PROGRESS:
+Color palette
+Action artwork
+SVG backgrounds
+
+
 TODO:
 Data persistency v1 - cookie files, 
 Responsive design fixes, 
