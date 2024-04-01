@@ -14,9 +14,9 @@ let posts; // Declare posts variable outside to be accessible
 let backgrounds;
 let factions;
 
-var file = "http://aemaze.studio/GameDemo/map/page-data.json";
-var factions_url = "http://aemaze.studio/GameDemo/map/page-data.json";
-var backgrounds_url = "http://aemaze.studio/GameDemo/character/background.json";
+var file = "./map/page-data.json";
+var factions_url = "./map/page-data.json";
+var backgrounds_url = "./character/background.json";
 
 fetchJSONData(file).then(data => {
     posts = data;
