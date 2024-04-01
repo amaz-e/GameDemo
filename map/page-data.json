@@ -1,0 +1,11 @@
+
+[{  "id": 1,
+    "title": "Latest News",
+    "content": "Work in progress frontend for browser strategy game. Loading config data from JSON file, basic action system for gameplay, and character creator mockup",
+    "completed": false
+},
+{   "id": 2,
+    "title": "TODO:",
+    "content": "Data persistency v1 - cookie files, Responsive design fixes, additional artwork for frames/actions/factions, missing data loaders, improve gameplay for local gameplay(no backend yet)",
+    "completed": false
+}]

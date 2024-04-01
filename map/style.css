@@ -1,0 +1,95 @@
+body {
+    background-color: rgb(64, 69, 74);
+
+    margin-top: 0px;
+}
+
+nav {
+    position: fixed; 
+    margin-top: 0;
+    background-color: rgb(81, 83, 97);
+    width: 100%;
+    text-align: right; 
+}
+
+nav ul {
+    padding: 10px;
+}
+
+nav li {
+    display: inline-block;
+    width: 120px; 
+    padding: 10px;
+    margin: 0px 20px 0px 20px ;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+nav li:hover {
+    background-color: cornflowerblue;
+}
+
+header {
+    position: fixed;
+    z-index: 1;
+}
+
+#page-content {
+    padding-top: 8dvh;   
+    scroll-behavior: smooth;
+}
+
+section {
+    display: flex;
+}
+
+article {
+    height: 85dvh;    
+    flex: 1;
+}
+
+#page1 {
+    background-color: src();
+}
+
+#page2 {
+    background-image: src();
+}
+
+#page3 {
+    background-image: src();
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    background-color: rgb(53, 66, 66);
+    text-align: center;
+}
+
+
+/* FONTS */
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: darkgray;
+}
+
+h1,h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+
+/* Repsonsive */
+@media only screen and (max-width: 700px) {
+    section {
+        flex-direction: column;
+    }
+
+} 
