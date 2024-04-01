@@ -1,0 +1,14 @@
+[
+  {
+    "name": "The Ark",
+    "description": "The Ark is a faction driven by religious zeal, viewing the flood as a divine punishment for the sins of humanity. They are deeply committed to repentance and seek to rebuild a society based on purity and righteousness. Their leaders are charismatic preachers who weave tales of salvation through faith and adherence to their strict moral code."
+  },
+  {
+    "name": "The Red Coats",
+    "description": "The Red Coats are staunch monarchists, holding onto the remnants of a past world's military structure. They believe in order through discipline, hierarchy, and loyalty to the crown. Led by former military commanders and officers, they seek to establish a new empire with military might at its core."
+  },
+  {
+    "name": "Trident",
+    "description": "Trident is a faction of daring individuals who embrace the chaos of the post-apocalyptic world. They see the flood as an opportunity rather than a punishment, believing it cleared the path for them to rise as the masters of the seas. Many are former sailors, fishermen, and even pirates, drawn to the freedom of Trident's way of life."
+  }
+]

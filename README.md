@@ -1,2 +1,2 @@
-# GameDemo
- Demo wof browser strategy game
+Sovereign Seas: Factions of the Flood - demo mockup
+

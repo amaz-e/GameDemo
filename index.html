@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+    <head>
+        <title>Game Demo</title>
+        <link rel="stylesheet" href="style.css">        
+    </head>
+
+    <header>
+        <img src=""></img><h1 class="page-tile">Game Demo</h1>
+    </header>  
+
+    <nav>
+        <ul>
+            <li onclick="toggleVisibility('page')">Start</li>
+            <li onclick="toggleVisibility('character')">Character</a></li>
+            <li onclick="toggleVisibility('map')">Map</li>
+            <li onclick="toggleVisibility('game')">Action</li>
+        </ul>
+    </nav>
+	<div id="page-content">
+    <div id="page" class="toggle-element hidden">
+        <section id="mainpage">
+			
+			<article id="chat" class="frame">
+				<div id="chatArea"></div>
+				<input type="text" id="messageInput" placeholder="Enter your message..." >
+				<button onclick="sendMessage()">Send</button>
+			</article>	
+			
+			<article id="menu" class="frame">
+                <h1>Menu</h1>
+                <ul width="300">
+					<li onclick="">Start new game</li>
+					<li onclick="">Save game</li>             
+					<li onclick="">Load game state</li>     
+				</ul>				
+		    </article>	
+			
+            <article id="post" class="frame">
+                <h2 id="post-title">News</h2>
+                <p id ="post-content">Game news</p>
+				<button onclick="loadPostData(1)">Previous</button>                
+				<button onclick="loadPostData(2)">Next</button>
+				</br>
+            </article>		
+			
+        </section>
+    </div>
+	
+	<div id="character" class="toggle-element hidden">
+		<section id="character-creator">
+			<article class="frame">
+				<div class="character">
+					<img id="character-image" src="character/images/character_base.png" alt="Character Image">
+					<h2>Captain name:</h2><input type="text" id="pname" name="pname" placeholder="Captain name" style="width: 500px;"><br>
+				</div>
+				<div class="options">
+				  <h2>Choose Portrait:</h2>
+				  <div class="outfit-options">
+					<img src="character/images/outfit (1).png" alt="Outfit 1" onclick="changeOutfit('outfit (1).png')">
+					<img src="character/images/outfit (2).png" alt="Outfit 2" onclick="changeOutfit('outfit (2).png')">
+					<img src="character/images/outfit (3).png" alt="Outfit 3" onclick="changeOutfit('outfit (3).png')">
+					<img src="character/images/outfit (4).png" alt="Outfit 4" onclick="changeOutfit('outfit (4).png')">
+					<img src="character/images/outfit (5).png" alt="Outfit 5" onclick="changeOutfit('outfit (5).png')">
+				  </div>
+				</div>
+			</article>
+			<article class="frame">
+				<h2>Character Background:</h2>
+				<select id="background" onchange="loadBackgroundData(this.value)">
+				  <option value="1">The Pirate Captain, Master of Stealth</option>
+				  <option value="2">The Admiral of the Iron Fleet, Master Tactician</option>
+				  <option value="3">The Corsair Queen, Mistress of Deception</option>
+				  <option value="4">The Sea Explorer, Cartographer Extraordinaire</option>
+				  <option value="5">The Admiral of the Royal Navy, Pillar of Honor</option>
+				  <option value="6">The Merchant Captain, Master of Trade</option>
+				  <option value="7">The Privateer Admiral, Champion of the Crown</option>
+				  <option value="8">The Smuggler King, Master of Shadows</option>
+				  <option value="9">The Bounty Hunter Captain, Hunter of the High Seas</option>
+				  <option value="10">The Naval Strategist, Mastermind of the Fleet</option>
+				  <option value="11">The Zealot of The Ark, Faith's Blade</option>
+				  <option value="12">The Mystic of Trident, Seer of the Deep</option>
+				</select>
+				<p id="character-background">In the realm of seafaring rogues, the Pirate Captain is a shadowy figure, known for slipping through blockades like a phantom in the night. His vessel, a sleek sloop with black sails that vanish against the horizon, strikes fear into the hearts of merchant ships. From covertly raiding coastal villages to swiftly disappearing into the labyrinthine network of hidden coves, the Pirate Captain's mastery of stealth is unmatched in this era of waterborne intrigue.</p>
+			  </br>
+				<h2>Character Faction:</h2>
+					<select id="faction" onchange="loadFactionData(this.value)">
+					<option value="The Ark">The Ark</option>
+					<option value="The Red Coats">The Red Coats</option>
+					<option value="Trident">Trident</option>
+				</select>
+				<p>The Ark is a faction driven by religious zeal, viewing the flood as a divine punishment for the sins of humanity. They are deeply committed to repentance and seek to rebuild a society based on purity and righteousness. Their leaders are charismatic preachers who weave tales of salvation through faith and adherence to their strict moral code.</p>
+				</br>
+				<h2>Character Specialization:</h2>
+				<p id="character-specialization">Captain</p>
+				<button>Save character</button>
+			</article>
+			
+		</section>
+
+	</div>
+	
+	<div id="map" class="toggle-element hidden">
+	    <section id="game-map">
+            <article id="map-container">
+				<button onclick="loadPostData(1)">Click me</button>    
+				<button onclick="loadPostData(2)">Click me</button>                 
+            </article>
+            <article id="map-description">
+                <h2 id="location-name">Location name</h2>
+				<p id="location-faction">Faction</p>
+				<p id="location-population">Population</p>
+				<p id="location-happiness">Happiness</p>
+                <p id ="location-description">Location description</p>
+				
+            </article>
+        </section>
+	</div>
+	
+	<div id="game" class="toggle-element hidden">
+	  <div class="container">
+		<section id="action">
+		<article>
+			<h1>Pick action for this turn</h1>
+				<img src="" height="300"></img>
+				<label for="locations">Select Location:</label>
+				<select id="locations">
+					<option value="A">The Ark</option>
+					<option value="B">Red Coats</option>
+					<option value="C">Trident</option>
+				</select>
+				</br>
+				<label for="actions">Select Action:</label>
+				<select id="actions">
+					<option value="harvest">Harvest</option>
+					<option value="defend">Defend</option>
+					<option value="celebrate">Celebrate</option>
+					<option value="trade">Trade</option>
+				</select>
+			  </br>
+				<button id="submitBtn">Submit Action</button>
+		</article>
+		<article>
+			<div id="results">
+			<p>Action result</p>
+			</div>
+		</article>
+		<article id="turns">
+			<div id="turn-container">
+				<article>
+					<p>Turn 1</p>
+				</article>
+			</div>
+		</section>
+	  </div>
+
+	
+	</div>
+   </div>
+	
+	
+    <footer>
+        <a href="">To Top</a>
+    </footer>
+    <script src="script.js"></script> 
+	<script src="game/game.js"></script>
+	<script src="character/character.js"></script>
+	<script src="chat/chat.js"></script>
+</html>

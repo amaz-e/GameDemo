@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Strategy Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Simple Strategy Game</h1>
+    <div>
+      <label for="locations">Select Location:</label>
+      <select id="locations">
+        <option value="A">Village A</option>
+        <option value="B">Town B</option>
+        <option value="C">City C</option>
+      </select>
+    </div>
+    <div>
+      <label for="actions">Select Action:</label>
+      <select id="actions">
+        <option value="harvest">Harvest</option>
+        <option value="defend">Defend</option>
+        <option value="celebrate">Celebrate</option>
+        <option value="trade">Trade</option>
+      </select>
+    </div>
+    <button id="submitBtn">Submit Action</button>
+    <div id="results"></div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
