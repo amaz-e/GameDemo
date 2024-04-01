@@ -27,3 +27,12 @@ function displayMessages() {
     chatArea.appendChild(messageElement);
   });
 }
+
+// Push message by clicking enter 
+var input = document.getElementById("messageInput");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    sendMessage();
+  }
+});

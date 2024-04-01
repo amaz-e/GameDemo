@@ -1,3 +1,5 @@
+var gameTurn = 0;
+
 // Define locations with initial stats
 let locations = {
     A: { name: "Village A", inhabitants: 50, resources: 100, happiness: 50 },

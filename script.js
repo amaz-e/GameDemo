@@ -8,7 +8,7 @@ function toggleVisibility(id) {
     }
   });
 }
-toggleVisibility('page');
+
 
 let posts; // Declare posts variable outside to be accessible
 let backgrounds;
@@ -100,10 +100,6 @@ function loadBackgroundData(id) {
 
 
 
-var input = document.getElementById("messageInput");
-input.addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    sendMessage();
-  }
-});
+// Load default state for windows
+toggleVisibility('page');
+loadPostData(1);
