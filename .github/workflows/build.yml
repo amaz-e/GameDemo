@@ -3,7 +3,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - main  
+      - main
 
 jobs:
   build:
@@ -15,13 +15,11 @@ jobs:
 
       - name: Build HTML
         run: |
-          # Add commands here to build your HTML files
-          # For example, if using Jekyll:
-          # bundle install
-          # bundle exec jekyll build
+          # Add any build commands you need here
+          # For example: npm install, gulp, webpack, etc.
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.GITHUB_TOKEN }}
-          
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: 
