@@ -98,8 +98,5 @@ function loadBackgroundData(id) {
     }
 }
 
-
-
 // Load default state for windows
 toggleVisibility('page');
-loadPostData(1);
